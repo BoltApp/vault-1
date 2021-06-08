@@ -1,3 +1,14 @@
+# Bolt Volt
+
+This repo is forked from Hashicorp Vault and the `bolt-v1.7.2` branch contains code changes allowing for the export/import/reconfiguration of transit keys.  We are using the [boltdev/vault:v1.7.2](https://hub.docker.com/repository/docker/boltdev/vault) image to assist w/ the migration of old vault (version 0.9.0) with unexportable transit keys to the latest version.
+
+```bash
+git checkout bolt-v1.7.2
+make docker-dev
+docker tag vault:dev boltdev/vault:v1.7.2
+docker push boltdev/vault:v1.7.2
+```
+
 # Vault [![CircleCI](https://circleci.com/gh/hashicorp/vault.svg?style=svg)](https://circleci.com/gh/hashicorp/vault) [![vault enterprise](https://img.shields.io/badge/vault-enterprise-yellow.svg?colorB=7c8797&colorA=000000)](https://www.hashicorp.com/products/vault/?utm_source=github&utm_medium=banner&utm_campaign=github-vault-enterprise)
 
 ----
