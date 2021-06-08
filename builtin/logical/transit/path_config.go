@@ -13,19 +13,19 @@ func (b *backend) pathConfig() *framework.Path {
 	return &framework.Path{
 		Pattern: "keys/" + framework.GenericNameRegex("name") + "/config",
 		Fields: map[string]*framework.FieldSchema{
-			"name": {
+			"name": &framework.FieldSchema{
 				Type:        framework.TypeString,
 				Description: "Name of the key",
 			},
 
-			"min_decryption_version": {
+			"min_decryption_version": &framework.FieldSchema{
 				Type: framework.TypeInt,
 				Description: `If set, the minimum version of the key allowed
 to be decrypted. For signing keys, the minimum
 version allowed to be used for verification.`,
 			},
 
-			"min_encryption_version": {
+			"min_encryption_version": &framework.FieldSchema{
 				Type: framework.TypeInt,
 				Description: `If set, the minimum version of the key allowed
 to be used for encryption; or for signing keys,
@@ -33,17 +33,17 @@ to be used for signing. If set to zero, only
 the latest version of the key is allowed.`,
 			},
 
-			"deletion_allowed": {
+			"deletion_allowed": &framework.FieldSchema{
 				Type:        framework.TypeBool,
 				Description: "Whether to allow deletion of the key",
 			},
 
-			"exportable": {
+			"exportable": &framework.FieldSchema{
 				Type:        framework.TypeBool,
 				Description: `Enables export of the key. Once set, this cannot be disabled.`,
 			},
 
-			"allow_plaintext_backup": {
+			"allow_plaintext_backup": &framework.FieldSchema{
 				Type:        framework.TypeBool,
 				Description: `Enables taking a backup of the named key in plaintext format. Once set, this cannot be disabled.`,
 			},
