@@ -4,9 +4,9 @@ This repo is forked from Hashicorp Vault and the `bolt-v1.7.2` branch contains c
 
 ```bash
 git checkout bolt-v1.7.2
-make docker-dev
-docker tag vault:dev boltdev/vault:v1.7.2
-docker push boltdev/vault:v1.7.2
+make docker-dev-ui
+docker tag vault:dev-ui boltdev/vault-ui:v1.7.2
+docker push boltdev/vault-ui:v1.7.2
 ```
 
 # Vault [![CircleCI](https://circleci.com/gh/hashicorp/vault.svg?style=svg)](https://circleci.com/gh/hashicorp/vault) [![vault enterprise](https://img.shields.io/badge/vault-enterprise-yellow.svg?colorB=7c8797&colorA=000000)](https://www.hashicorp.com/products/vault/?utm_source=github&utm_medium=banner&utm_campaign=github-vault-enterprise)
